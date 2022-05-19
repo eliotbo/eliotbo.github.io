@@ -1,0 +1,28 @@
+{
+  "name": "glsl",
+  "collaborators": [
+    "Dimitri Sabadie <dimitri.sabadie@gmail.com>"
+  ],
+  "description": "A GLSL450/GLSL460 parser.",
+  "version": "6.0.1",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phaazon/glsl"
+  },
+  "files": [
+    "glsl_bg.wasm",
+    "glsl.js",
+    "glsl.d.ts"
+  ],
+  "module": "glsl.js",
+  "homepage": "https://github.com/phaazon/glsl",
+  "types": "glsl.d.ts",
+  "sideEffects": false,
+  "keywords": [
+    "GLSL",
+    "OpenGL",
+    "SPIR-V",
+    "parser"
+  ]
+}
