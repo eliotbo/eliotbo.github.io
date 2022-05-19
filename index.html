@@ -5,6 +5,19 @@
     <title>hello-wasm example</title>
   </head>
   <body>
+    <h1 style="color:green;">  
+        GLSL2WGSL  
+    </h1>
+    <h2>Text value property</h2>
+    <p>
+        Change the text of the text field, 
+        and then click the button below. 
+    </p>
+
+    Name:<input type="text" id="myText" value="Mickey">
+    <button type="button" onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+
     <script type="module">
       import init, {greet} from "./target/glsl.js";
       init()
@@ -15,3 +28,5 @@
     </script>
   </body>
 </html>
+
+
