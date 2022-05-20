@@ -1,4 +1,4 @@
-import init, {greet, do_parse} from "./pkg/glsl.js";
+import init, {greet, do_parse} from "./target/glsl.js";
 
 init()
     .then(() => {
