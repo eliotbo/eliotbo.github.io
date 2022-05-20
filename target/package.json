@@ -1,28 +1,29 @@
 {
-  "name": "glsl",
+  "name": "glsl2wgsl",
   "collaborators": [
-    "Dimitri Sabadie <dimitri.sabadie@gmail.com>"
+    "Eliot Bolduc <eliot.bolduc@gmail.com>"
   ],
-  "description": "A GLSL450/GLSL460 parser.",
-  "version": "6.0.1",
+  "description": "Translates GLSL code to WGSL.",
+  "version": "0.0.1",
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/phaazon/glsl"
+    "url": "https://eliotbo.github.io/"
   },
   "files": [
-    "glsl_bg.wasm",
-    "glsl.js",
-    "glsl.d.ts"
+    "glsl2wgsl_bg.wasm",
+    "glsl2wgsl.js",
+    "glsl2wgsl.d.ts"
   ],
-  "module": "glsl.js",
-  "homepage": "https://github.com/phaazon/glsl",
-  "types": "glsl.d.ts",
+  "module": "glsl2wgsl.js",
+  "homepage": "https://eliotbo.github.io/",
+  "types": "glsl2wgsl.d.ts",
   "sideEffects": false,
   "keywords": [
     "GLSL",
-    "OpenGL",
-    "SPIR-V",
-    "parser"
+    "WGSL",
+    "parser",
+    "transpiler",
+    "translator"
   ]
 }

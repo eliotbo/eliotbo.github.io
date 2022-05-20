@@ -1,4 +1,4 @@
-import init, {greet, do_parse} from "./target/glsl.js";
+import init, {greet, do_parse} from "./target/glsl2wgsl.js";
 
 init()
     .then(() => {
