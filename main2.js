@@ -1,6 +1,6 @@
 
 
-import init, { greet, do_parse } from "transpiler/glsl2wgsl.js";
+import init, { greet, do_parse } from "../transpiler/glsl2wgsl.js";
 
 var editor1 = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineNumbers: true,
