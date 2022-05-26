@@ -1,87 +1,85 @@
-<!-- wasm-pack build --target web -->
+<!doctype html>
 
-<!DOCTYPE html>
-<html>
+<title>CodeMirror: Rust mode</title>
+<meta charset="utf-8" />
+<!-- <link rel=stylesheet href="node_modules/codemirror/doc/docs.css"> -->
 
-<head>
-    <style>
-        .button {
-            background-color: #db7b26;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-    </style>
+<link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
+<script src="node_modules/codemirror/lib/codemirror.js"></script>
+<script src="node_modules/codemirror/addon/mode/simple.js"></script>
+<script src="node_modules/codemirror/mode/rust/rust.js"></script>
+<script src="node_modules/codemirror/mode/clike/clike.js"></script>
+<script src="main2.js" type="module"></script>
+<style>
+    .CodeMirror {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
 
-    <script src="codemirror/lib/codemirror.js"> </script>
-    <link rel="stylesheet" href="codemirror/lib/codemirror.css" />
+        text-align: left !important;
+        resize: vertical;
+        overflow: auto !important;
+    }
 
-    <!-- <script src="codemirror/mode/clike/clike.js">  </script> -->
+    .button {
+        background-color: #db7b26;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
 
-    <!-- <script src="rust.js">    </script> -->
-    <script src="codemirror/mode/clojure/clojure.js">    </script>
-    <!-- <script src="rust.js"></script> -->
-    <!-- <script src="codemirror/addon/mode/simple.js"> </script> -->
-    <script src="codemirror/addon/edit/matchbrackets.js"> </script>
-    <!-- <script src="codemirror/mode/rust/rust.js">    </script> -->
-    <script src="codemirror/mode/rust/rust.js">    </script>
-    <script src="main2.js" type="module"></script>
+    * {
+        box-sizing: border-box;
+    }
 
-    <!-- <link href="codemirror/theme/dracula.css" rel="stylesheet" /> -->
-    <style>
-        .CodeMirror {
-            border: 5px inset rgb(78, 139, 139);
-            text-align: left !important;
-            resize: horizontal;
-            overflow: auto !important;
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        flex: 45%;
+        width: 50%;
+        padding: 10px;
+        height: 1000px;
+        /* Should be removed. Only for demonstration */
+    }
 
-        }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: flex;
+        clear: both;
+    }
+</style>
+<!-- <div id=nav>
+    <a href="https://codemirror.net">
+        <h1>CodeMirror</h1><img id=logo src="node_modules/codemirror/doc/logo.png" alt="">
+    </a>
 
-        * {
-            box-sizing: border-box;
-        }
+    <ul>
+        <li><a href="node_modules/codemirror/index.html">Home</a>
+        <li><a href="node_modules/codemirror/doc/manual.html">Manual</a>
+        <li><a href="https://github.com/codemirror/codemirror">Code</a>
+    </ul>
+    <ul>
+        <li><a href="../index.html">Language modes</a>
+        <li><a class=active href="#">Rust</a>
+    </ul>
+</div> -->
 
-        /* Create two equal columns that floats next to each other */
-        .column {
-            float: left;
-            flex: 45%;
-            width: 50%;
-            padding: 10px;
-            height: 300px;
-            /* Should be removed. Only for demonstration */
-        }
+<article>
+    <!-- <h2>Rust mode</h2> -->
 
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: flex;
-            clear: both;
-        }
-    </style>
-</head>
-
-
-
-<body style="background-color:#333333;">
     <center>
         <h1>GLSL2WGSL</h1>
         <h2>Convert glsl code to wgsl</h2>
 
         <br>
 
-
-
-        <br> <br>
         <button onclick="dum()" class="button">Convert!</button>
-        <br> <br>
-
-
 
         <div class="row">
             <div class="column">
@@ -89,28 +87,16 @@
                 <textarea id="code" name="code">float yu = 1;</textarea>
             </div>
             <div class="column">
-                <p> ~ </p>
+                <p> WGSL code appears here: </p>
                 <textarea id="code2" name="code2"></textarea>
             </div>
         </div>
 
-        <!-- <textarea id="code" name="code">
-float yu = 1;</textarea>
-        <textarea id="code2" name="code2"></textarea> -->
+
 
 
     </center>
+    <br>
+    <br>
 
-
-
-
-
-
-
-
-
-
-</body>
-
-
-</html>
+</article>

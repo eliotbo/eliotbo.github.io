@@ -8,7 +8,6 @@ var editor1 = CodeMirror.fromTextArea(document.getElementById("code"), {
     // lineWrapping: true,
     // indentUnit: 4,
     // mode: "text/rust",
-    mode: "text/x-csrc",
 
     matchBrackets: true,
 });
