@@ -25,5 +25,8 @@
     "parser",
     "transpiler",
     "translator"
-  ]
+  ],
+  "dependencies": {
+    "codemirror": "^5.65.4"
+  }
 }

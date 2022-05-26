@@ -46,6 +46,8 @@ window.dum = function dum() {
     // // let tt = t.innerHTML.valueOf();
     // let tt = t.value;
     let savior = do_parse(t);
+    // let s = "ahhh \n no!";
+    // editor2.setValue(s);
 
     editor2.setValue(savior);
 
