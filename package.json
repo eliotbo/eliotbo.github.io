@@ -1,32 +1,23 @@
 {
-  "name": "glsl2wgsl",
-  "collaborators": [
-    "Eliot Bolduc <eliot.bolduc@gmail.com>"
-  ],
-  "description": "Translates GLSL code to WGSL.",
-  "version": "0.0.1",
-  "license": "BSD-3-Clause",
-  "repository": {
-    "type": "git",
-    "url": "https://eliotbo.github.io/"
-  },
-  "files": [
-    "glsl2wgsl_bg.wasm",
-    "glsl2wgsl.js",
-    "glsl2wgsl.d.ts"
-  ],
-  "module": "glsl2wgsl.js",
-  "homepage": "https://eliotbo.github.io/",
-  "types": "glsl2wgsl.d.ts",
-  "sideEffects": false,
-  "keywords": [
-    "GLSL",
-    "WGSL",
-    "parser",
-    "transpiler",
-    "translator"
-  ],
+  "name": "eliotbo.github.io",
+  "version": "1.0.0",
+  "description": "test 2 test 3",
+  "main": "main2.js",
   "dependencies": {
     "codemirror": "^5.65.4"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliotbo/eliotbo.github.io.git"
+  },
+  "author": "eliotbo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eliotbo/eliotbo.github.io/issues"
+  },
+  "homepage": "https://github.com/eliotbo/eliotbo.github.io#readme"
 }
