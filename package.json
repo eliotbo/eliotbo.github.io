@@ -1,0 +1,29 @@
+{
+  "name": "glsl2wgsl",
+  "collaborators": [
+    "Eliot Bolduc <eliot.bolduc@gmail.com>"
+  ],
+  "description": "Translates GLSL code to WGSL.",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://eliotbo.github.io/"
+  },
+  "files": [
+    "glsl2wgsl_bg.wasm",
+    "glsl2wgsl.js",
+    "glsl2wgsl.d.ts"
+  ],
+  "module": "glsl2wgsl.js",
+  "homepage": "https://eliotbo.github.io/",
+  "types": "glsl2wgsl.d.ts",
+  "sideEffects": false,
+  "keywords": [
+    "GLSL",
+    "WGSL",
+    "parser",
+    "transpiler",
+    "translator"
+  ]
+}

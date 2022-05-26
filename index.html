@@ -18,40 +18,99 @@
             cursor: pointer;
         }
     </style>
+
+    <script src="codemirror/lib/codemirror.js"> </script>
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css" />
+
+    <!-- <script src="codemirror/mode/clike/clike.js">  </script> -->
+
+    <!-- <script src="rust.js">    </script> -->
+    <script src="codemirror/mode/clojure/clojure.js">    </script>
+    <!-- <script src="rust.js"></script> -->
+    <!-- <script src="codemirror/addon/mode/simple.js"> </script> -->
+    <script src="codemirror/addon/edit/matchbrackets.js"> </script>
+    <!-- <script src="codemirror/mode/rust/rust.js">    </script> -->
+    <script src="codemirror/mode/rust/rust.js">    </script>
+    <script src="main2.js" type="module"></script>
+
+    <!-- <link href="codemirror/theme/dracula.css" rel="stylesheet" /> -->
+    <style>
+        .CodeMirror {
+            border: 5px inset rgb(78, 139, 139);
+            text-align: left !important;
+            resize: horizontal;
+            overflow: auto !important;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            flex: 45%;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: flex;
+            clear: both;
+        }
+    </style>
 </head>
 
-<body>
+
+
+<body style="background-color:#333333;">
     <center>
         <h1>GLSL2WGSL</h1>
         <h2>Convert glsl code to wgsl</h2>
 
-        <p>Paste glsl code here:</p>
-
-
-
-        <!-- <p id="demo"></p> -->
-
         <br>
 
-        <!-- <textarea id="glslarea" name="glsl-" rows="10" cols="80">float b = 1; </textarea> -->
-        <textarea id="glslarea" name="glsl" rows="15" cols="80">
-float yu = 1;
-</textarea>
 
-        <br>
-        <br>
 
+        <br> <br>
         <button onclick="dum()" class="button">Convert!</button>
-        <br>
-        <br>
+        <br> <br>
 
-        <textarea id="wgslarea" name="wlsl-" rows="15" cols="80"> </textarea>
+
+
+        <div class="row">
+            <div class="column">
+                <p>Paste glsl code here:</p>
+                <textarea id="code" name="code">float yu = 1;</textarea>
+            </div>
+            <div class="column">
+                <p> ~ </p>
+                <textarea id="code2" name="code2"></textarea>
+            </div>
+        </div>
+
+        <!-- <textarea id="code" name="code">
+float yu = 1;</textarea>
+        <textarea id="code2" name="code2"></textarea> -->
+
+
     </center>
-    <br>
 
 
-    <script src="/main.js" type="module"></script>
+
+
+
+
+
+
+
 
 </body>
+
 
 </html>
