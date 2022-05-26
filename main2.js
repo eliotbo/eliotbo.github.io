@@ -1,6 +1,6 @@
 
 
-import init, { greet, do_parse } from "./target/glsl2wgsl.js";
+import init, { greet, do_parse } from "../transpiler/glsl2wgsl.js";
 
 var editor1 = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineNumbers: true,
@@ -8,7 +8,7 @@ var editor1 = CodeMirror.fromTextArea(document.getElementById("code"), {
     // lineWrapping: true,
     // indentUnit: 4,
     // mode: "text/rust",
-    mode: "text/x-csrc",
+    // mode: "text/x-csrc",
 
     matchBrackets: true,
 });
@@ -20,7 +20,7 @@ var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
     // theme: "dracula",
     // lineWrapping: true,
     // indentUnit: 4,
-    mode: "rust",
+    // mode: "rust",
 
     matchBrackets: true,
 });
