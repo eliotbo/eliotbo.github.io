@@ -1,22 +1,59 @@
 {
-  "name": "eliotbo.github.io",
-  "version": "1.0.0",
-  "description": "test 2 test 3",
-  "dependencies": {
-    "codemirror": "^5.65.4"
+  "_from": "codemirror-examples",
+  "_id": "codemirror-examples@1.0.52",
+  "_inBundle": false,
+  "_integrity": "sha512-K+MwSGe8dRJaP/3nj9LJWCw6LohHsuT1GeuOyY5P4hLQnwOizMlBh5jwpa00iYHIsWjvlhdFO0gYLv2ifuHhTQ==",
+  "_location": "/codemirror-examples",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "codemirror-examples",
+    "name": "codemirror-examples",
+    "escapedName": "codemirror-examples",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/codemirror-examples/-/codemirror-examples-1.0.52.tgz",
+  "_shasum": "b241c9ee8193dfe38b09a35b728bd855c9308946",
+  "_spec": "codemirror-examples",
+  "_where": "/home/eliotbolduc/Documents/githubwebsite/codemirror_example",
+  "author": {
+    "name": "dan@hollenbecks.com"
   },
+  "bugs": {
+    "url": "https://github.com/dhollenbeck/codemirror-examples/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Codemirror examples including handlebars linting integration.",
+  "devDependencies": {
+    "codemirror": "^5.49.0",
+    "concat": "^1.0.3",
+    "csslint": "^1.0.5",
+    "handlebars": "^4.4.3",
+    "htmlhint": "^0.11.0",
+    "jshint": "^2.10.2",
+    "jsonlint": "^1.6.3",
+    "provejs-handlebars": "0.0.47"
+  },
+  "homepage": "https://github.com/dhollenbeck/codemirror-examples#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "codemirror-examples",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eliotbo/eliotbo.github.io.git"
+    "url": "git+https://github.com/dhollenbeck/codemirror-examples.git"
   },
-  "author": "eliotbo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/eliotbo/eliotbo.github.io/issues"
+  "scripts": {
+    "build": "node ./build/concat.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/eliotbo/eliotbo.github.io#readme"
+  "version": "1.0.52"
 }
