@@ -2,7 +2,9 @@
   "name": "eliotbo.github.io",
   "version": "1.0.0",
   "description": "test 2 test 3",
-  "dependencies": {},
+  "dependencies": {
+    "codemirror": "^5.65.4"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
