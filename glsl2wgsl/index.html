@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body style="background-color:rgb(19, 18, 29);"></body>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Basic</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+
+	<!-- start of codemirror -->
+	<link rel="stylesheet" href="../dist/codemirror-examples.css">
+	<link rel=stylesheet href="../theme/dracula.css">
+	<script src="../dist/codemirror-examples.js"></script>
+	<!-- <script src="../../lib/codemirror.js"></script> -->
+	<script src="../mode/rust/rust.js"></script>
+	<script src="../mode/clike/clike.js"></script>
+	<script src="./main2.js" type="module"></script>
+	<!-- <script src="./glsl2wgsl.js" type="module"></script> -->
+
+
+	<script src="https://provejs.github.io/provejs-jquery/examples/prove.js"></script>
+	<script src="https://provejs.github.io/provejs-jquery/examples/decorator.js"></script>
+
+
+	<style>
+		.CodeMirror {
+			border: 5px solid #eee;
+			height: 50px;
+			/* resize: vertical; */
+			/* overflow: auto !important; */
+
+		}
+
+		.CodeMirror.read-only .CodeMirror-lines {
+			background-color: #e4fdc7;
+		}
+
+		.page-header {
+			color: #3cbc5c;
+		}
+
+		#logo {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+		}
+
+		.button {
+			background-color: #db7b26;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+
+		/* Create two equal columns that floats next to each other */
+		.column {
+			float: left;
+			flex: 49%;
+			width: 50%;
+			padding: 10px;
+			height: 1000px;
+			/* Should be removed. Only for demonstration */
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: flex;
+			clear: both;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container">
+		<div id="logo">
+			<a href="/"><img src="/home2.png"></a>
+		</div>
+
+		<div class="page-header">
+			<h1>GLSL2WGSL <small>convert glsl code to wgsl</small></h1>
+		</div>
+
+		<center><button onclick="dum()" class="button">
+				Convert!
+			</button></center>
+		<!-- <script>function convertCode() { } </script> -->
+
+		<div class="row">
+
+			<div class="column">
+				<p>Paste glsl code here:</p>
+
+				<form class="form-horizontal">
+
+					<div class="form-group">
+						<!-- <label for="css" class="col-sm-2 control-label">GLSL</label> -->
+						<div class="col-sm-10">
+							<textarea class="form-control" name="css" mode="text/x-c" theme="dracula">
+int res
+</textarea>
+						</div>
+					</div>
+			</div>
+			<div class="column">
+				<p> WGSL code appears here: </p>
+
+
+				<div class="form-group">
+					<!-- <label for="html" class="col-sm-2 control-label">WGSL</label> -->
+					<div class="col-sm-10">
+						<textarea class="form-control" name="html" mode="rust" theme="dracula">
+let x = 1;
+					</textarea>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			</form>
+		</div>
+</body>
+
+</html>

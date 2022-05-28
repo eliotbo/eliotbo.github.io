@@ -14,13 +14,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -29,40 +22,51 @@
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
 
-	<!-- start of codemirror -->
-	<link rel="stylesheet" href="../../dist/codemirror-examples.css">
-	<link rel=stylesheet href="../../theme/dracula.css">
-	<script src="../../dist/codemirror-examples.js"></script>
-	<!-- <script src="../../lib/codemirror.js"></script> -->
-	<script src="../../mode/rust/rust.js"></script>
-	<script src="../../mode/clike/clike.js"></script>
-
-
 	<script src="https://provejs.github.io/provejs-jquery/examples/prove.js"></script>
 	<script src="https://provejs.github.io/provejs-jquery/examples/decorator.js"></script>
 
 
+	<!-- start of codemirror -->
+	<!-- <link rel="stylesheet" href="../../dist/codemirror-examples.css"> -->
+	<!-- <link rel=stylesheet href="../../theme/dracula.css"> -->
+	<!-- <script src="../../dist/codemirror-examples.js"></script> -->
+	<!-- <script src="../../lib/codemirror.js"></script> -->
+	<!-- <script src="../../mode/rust/rust.js"></script>
+	<script src="../../mode/clike/clike.js"></script> -->
 
-	<script>
+
+
+
+
+	<!-- <script>
 		$(function () {
-			var css = $('textarea[mode="text/x-c"]');
-			var html = $('textarea[mode="rust"]');
+			// var css = $('textarea[mode="text/x-c"]');
+			// var html = $('textarea[mode="rust"]');
 
 			var editor1 = css.editor();
 			var editor2 = html.editor();
 
 		});
-	</script>
+	</script> -->
 
 	<style>
 		.CodeMirror {
 			border: 1px solid #eee;
 			min-height: 50px;
-
 		}
 
 		.CodeMirror.read-only .CodeMirror-lines {
 			background-color: #e4fdc7;
+		}
+
+		.page-header {
+			color: #3cbc5c;
+		}
+
+		#logo {
+			position: fixed;
+			top: 20px;
+			right: 20px;
 		}
 	</style>
 
@@ -70,12 +74,17 @@
 
 <body>
 	<div class="container">
-
-		<div class="page-header">
-			<h1>GLSL2WGSL <small>Convert glsl code to wgsl</small></h1>
+		<div id="logo">
+			<a href="/"><img src="/home2.png"></a>
 		</div>
 
-		<form class="form-horizontal">
+		<div class="page-header">
+			<h1>Blog <small>bits of wisdom... I hope</small></h1>
+		</div>
+
+		<p> empty </p>
+
+		<!-- <form class="form-horizontal">
 
 			<div class="form-group">
 				<label for="css" class="col-sm-2 control-label">GLSL</label>
@@ -94,10 +103,8 @@ let x = 1;
 				</div>
 			</div>
 
+		</form> -->
 
-
-
-		</form>
 	</div>
 </body>
 
