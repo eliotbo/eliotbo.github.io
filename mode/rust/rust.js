@@ -3,9 +3,9 @@
 
 (function (mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS
-    mod(require("../../lib/codemirror"), require("../../libs/addon/mode/simple"));
+    mod(require("../../lib/codemirror.js"), require("../../libs/addon/mode/simple.js"));
   else if (typeof define == "function" && define.amd) // AMD
-    define(["../../lib/codemirror", "../../libs/addon/mode/simple"], mod);
+    define(["../../lib/codemirror.js", "../../libs/addon/mode/simple.js"], mod);
   else // Plain browser env
     mod(CodeMirror);
 })(function (CodeMirror) {
@@ -74,3 +74,4 @@
   CodeMirror.defineMIME("text/x-rustsrc", "rust");
   CodeMirror.defineMIME("text/rust", "rust");
 });
+
