@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<body style="background-color:rgb(19, 18, 29);"></body>
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +11,8 @@
 	<title>Basic</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,77 +25,45 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
 
 	<!-- start of codemirror -->
 	<link rel="stylesheet" href="../../dist/codemirror-examples.css">
+	<link rel=stylesheet href="../../theme/dracula.css">
 	<script src="../../dist/codemirror-examples.js"></script>
+	<!-- <script src="../../lib/codemirror.js"></script> -->
+	<script src="../../mode/rust/rust.js"></script>
+	<script src="../../mode/clike/clike.js"></script>
+
+
 	<script src="https://provejs.github.io/provejs-jquery/examples/prove.js"></script>
 	<script src="https://provejs.github.io/provejs-jquery/examples/decorator.js"></script>
 
+
+
 	<script>
-	$(function(){
-		var css = $('textarea[mode="css"]');
-		var html = $('textarea[mode="html"]');
-		var hbs = $('textarea[mode="handlebars"]');
+		$(function () {
+			var css = $('textarea[mode="text/x-c"]');
+			var html = $('textarea[mode="rust"]');
 
-		var editor1 = css.editor();
-		var editor2 = html.editor();
-		var editor3 = hbs.editor();
+			var editor1 = css.editor();
+			var editor2 = html.editor();
 
-		// validation
-		// see https://github.com/provejs/provejs-jquery
-		var form = $('form');
-		form.prove({
-			fields: {
-				css: {
-					selector: 'textarea[mode="css"]',
-					validators: {
-						proveRequired: {
-							message: 'Every body loves CSS so it is required here.'
-						},
-						proveCallback: {
-							message: 'Please fix the linting errors shown above.',
-							callback: function(fieldValue) {
-								var marks = editor1.state.lint.marked;
-								return (marks.length === 0);
-							}
-						}
-					}
-				},
-				html: {
-					selector: 'textarea[mode="html"]',
-					validators: {
-						proveCallback: {
-							message: 'Please fix the linting errors shown above.',
-							callback: function(fieldValue) {
-								var marks = editor2.state.lint.marked;
-								return (marks.length === 0);
-							}
-						}
-					}
-				},
-				hbs: {
-					selector: 'textarea[mode="handlebars"]',
-					validators: {
-						proveCallback: {
-							message: 'Please fix the linting errors shown above.',
-							callback: function(fieldValue) {
-								var marks = editor3.state.lint.marked;
-								return (marks.length === 0);
-							}
-						}
-					}
-				}
-			}
 		});
-		form.decorate('bootstrap');
-	});
 	</script>
 
 	<style>
-	.CodeMirror {border: 1px solid #eee; min-height: 50px;}
-	.CodeMirror.read-only .CodeMirror-lines{background-color: ##e4fdc7;}
+		.CodeMirror {
+			border: 1px solid #eee;
+			min-height: 50px;
+
+		}
+
+		.CodeMirror.read-only .CodeMirror-lines {
+			background-color: #e4fdc7;
+		}
 	</style>
 
 </head>
@@ -101,54 +72,31 @@
 	<div class="container">
 
 		<div class="page-header">
-			<h1>CodeMirror Example <small>Linting, Autosize, and Bootstrap</small></h1>
+			<h1>GLSL2WGSL <small>Convert glsl code to wgsl</small></h1>
 		</div>
 
 		<form class="form-horizontal">
+
 			<div class="form-group">
-				<label for="field1" class="col-sm-2 control-label">Field 1</label>
+				<label for="css" class="col-sm-2 control-label">GLSL</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="field1" placeholder="your input">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="css" class="col-sm-2 control-label">CSS</label>
-				<div class="col-sm-10">
-					<textarea class="form-control" name="css" mode="css">
-.foobar {
-	color: blue;
-	background-color = invalid-color;
-}
+					<textarea class="form-control" name="css" mode="text/x-c" theme="dracula">
+int res
 </textarea>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="html" class="col-sm-2 control-label">HTML</label>
+				<label for="html" class="col-sm-2 control-label">WGSL</label>
 				<div class="col-sm-10">
-					<textarea class="form-control" name="html" mode="html">
-<h1 class="foobar">Hello World</h1>
-<div>
-	This is an invalid div.
-<div
-					</textarea>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="html" class="col-sm-2 control-label">Handlebars</label>
-				<div class="col-sm-10">
-					<textarea class="form-control" name="html" mode="handlebars">
-{{#each foobars extraThing}}
-<h1 class="foobar">{{echo 'hello world'}</h1>
-{{/if}}
+					<textarea class="form-control" name="html" mode="rust" theme="dracula">
+let x = 1;
 					</textarea>
 				</div>
 			</div>
 
-			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
-					<button type="submit" class="btn btn-primary">Save</button>
-				</div>
-			</div>
+
+
+
 		</form>
 	</div>
 </body>
