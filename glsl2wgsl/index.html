@@ -6,27 +6,6 @@
 <head>
 	<title>GLSL2WGSL</title>
 
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-
-	<!-- start of codemirror -->
-	<!-- <link rel="stylesheet" href="../dist/codemirror-examples.css"> -->
-	<!-- <link rel=stylesheet href="../theme/dracula.css"> -->
-	<!-- <script src="../dist/codemirror-examples.js"></script> -->
-	<!-- <script src="../../codemirror/lib/codemirror.js"></script> -->
-	<!-- <script src="../mode/rust/rust.js"></script> -->
-	<!-- <script src="../mode/clike/clike.js"></script> -->
-	<!-- <script src="./main2.js" type="module"></script> -->
-	<!-- <script src="./glsl2wgsl.js" type="module"></script> -->
-
-	<!-- <script src="../dist/codemirror-examples.js"></script> -->
-	<!-- <script src="../mode/rust/rust.js"></script> -->
-	<!-- <link rel=stylesheet href="../theme/dracula.css">
-	<script src="../codemirror/lib/codemirror.js"></script>
-	<link rel=stylesheet href="../codemirror/lib/codemirror.css">
-	<script src="../mode/clike/clike.js"></script>
-	<script src="./main2.js" type="module"></script> -->
-
-
 	<link rel="stylesheet" href="../codemirror/lib/codemirror.css">
 	<link rel="stylesheet" href="../codemirror/theme/dracula.css">
 	<script src="../codemirror/lib/codemirror.js"></script>
@@ -38,13 +17,11 @@
 	<style>
 		body {
 			font-family: Arial, Helvetica, sans-serif;
-			/* width: 1000px; */
 		}
 
 		.CodeMirror {
 			border: 5px solid #eee;
 			height: 900px !important;
-			/* min-height: 800px !important; */
 			text-align: left !important;
 			/* resize: vertical !important; */
 			/* overflow: auto !important; */
@@ -79,9 +56,6 @@
 			color: white;
 			padding: 13px 32px;
 
-			/* text-align: center; */
-			/* text-decoration: none; */
-			/* padding: 25px 25px 70px 40px; */
 			display: inline-block;
 			font-size: 20px;
 			margin: 4px 2px;
@@ -91,7 +65,6 @@
 			margin-top: -20px;
 		}
 
-		/* Create two equal columns that floats next to each other */
 		.column2 {
 			float: left;
 			flex: 50%;
@@ -112,12 +85,10 @@
 			margin-right: auto;
 		}
 
-		/* Clear floats after the columns */
 		.row:after {
 			content: "";
 			display: flex;
 			clear: both;
-			/* padding: 25px 50px 75px 100px; */
 		}
 
 		.alignleft {
@@ -127,75 +98,36 @@
 		.alignright {
 			float: right;
 		}
-
-
-		/* .div2 {
-			border: 1px solid black;
-			padding: 25px 50px 75px 100px;
-			background-color: lightblue;
-		} */
 	</style>
-
-	<script>
-		// var css = $('textarea[mode="text/x-c"]');
-		// var html = $('textarea[mode="rust"]');
-
-		// var editor1 = css.editor();
-		// editor1.setSize(null, "500");
-
-
-		// var editor2 = html.editor();
-		// editor2.setSize(null, "500");
-	</script>
-
 </head>
 
 <body>
-
-
 	<div class="column">
-
-
 
 		<h1 class="page-header2">GLSL2WGSL2 <small>convert glsl code to wgsl</small> </h1>
 		<a href="/" class="logo"> <img src="/home2.png"> </a>
 		<div style="clear: both;"></div>
 		<hr style="border: 2px solid rgb(122, 119, 175); border-radius: 5px;  margin-bottom: 1cm;">
 
-
-
-		<!-- <center>
-			<button onclick="dum()" class="button"> --- Convert  </button>
-		</center> -->
-
-
 	</div>
-
 
 	<div class="row" style=" margin-top: -3cm;">
 
 		<div class="column2">
 			<p style="color:rgb(122, 119, 175)">Paste glsl code here:
-				<button onclick="dum()" class="button"> &#8594 Convert &#8594 </button>
+				<button onclick="convertToWgsl()" class="button"> &#8594 Convert &#8594 </button>
 			</p>
 
 			<textarea class="form-control" id="code" name="css" mode="text/x-c">
-float a = 1;
-					</textarea>
-
+float a = 1;</textarea>
 		</div>
 
 		<div class="column2">
 			<p style="color:rgb(122, 119, 175)"> WGSL code appears here: </p>
 
-			<textarea name="html" id="code2" mode="rust">
-let x = 1;
-					</textarea>
-
+			<textarea name="html" id="code2" mode="rust"></textarea>
 		</div>
 	</div>
-
-
 
 </body>
 
