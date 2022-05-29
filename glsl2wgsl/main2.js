@@ -53,8 +53,8 @@ window.dum = function dum() {
     let t = editor1.getValue();
     let savior = do_parse(t);
     editor2.setValue(savior);
-    editor1.setSize(null, "800");
-    editor2.setSize(null, "800");
+    // editor1.setSize(null, "800");
+    // editor2.setSize(null, "800");
 }
 
 
