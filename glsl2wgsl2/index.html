@@ -6,18 +6,32 @@
 <head>
 	<title>GLSL2WGSL</title>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 
 	<!-- start of codemirror -->
-	<link rel="stylesheet" href="../dist/codemirror-examples.css">
-	<link rel=stylesheet href="../theme/dracula.css">
-	<script src="../dist/codemirror-examples.js"></script>
-	<!-- <script src="../../lib/codemirror.js"></script> -->
-	<script src="../mode/rust/rust.js"></script>
-	<script src="../mode/clike/clike.js"></script>
-	<script src="./main2.js" type="module"></script>
+	<!-- <link rel="stylesheet" href="../dist/codemirror-examples.css"> -->
+	<!-- <link rel=stylesheet href="../theme/dracula.css"> -->
+	<!-- <script src="../dist/codemirror-examples.js"></script> -->
+	<!-- <script src="../../codemirror/lib/codemirror.js"></script> -->
+	<!-- <script src="../mode/rust/rust.js"></script> -->
+	<!-- <script src="../mode/clike/clike.js"></script> -->
+	<!-- <script src="./main2.js" type="module"></script> -->
 	<!-- <script src="./glsl2wgsl.js" type="module"></script> -->
 
+	<!-- <script src="../dist/codemirror-examples.js"></script> -->
+	<!-- <script src="../mode/rust/rust.js"></script> -->
+	<!-- <link rel=stylesheet href="../theme/dracula.css">
+	<script src="../codemirror/lib/codemirror.js"></script>
+	<link rel=stylesheet href="../codemirror/lib/codemirror.css">
+	<script src="../mode/clike/clike.js"></script>
+	<script src="./main2.js" type="module"></script> -->
+
+	<link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+	<script src="../codemirror/lib/codemirror.js"></script>
+	<script src="../codemirror/addon/mode/simple.js"></script>
+	<script src="../codemirror/mode/rust/rust.js"></script>
+	<script src="../codemirror/mode/clike/clike.js"></script>
+	<script src="main2.js" type="module"></script>
 
 	<style>
 		body {
@@ -61,12 +75,13 @@
 			background-color: #db26cf;
 			border: none;
 			color: white;
-			padding: 15px 32px;
+			padding: 13px 32px;
+
 			/* text-align: center; */
 			/* text-decoration: none; */
 			/* padding: 25px 25px 70px 40px; */
 			display: inline-block;
-			font-size: 16px;
+			font-size: 20px;
 			margin: 4px 2px;
 			cursor: pointer;
 			float: right;
@@ -162,8 +177,8 @@
 				<button onclick="dum()" class="button"> &#8594 Convert &#8594 </button>
 			</p>
 
-			<textarea class="form-control" name="css" mode="text/x-c" theme="dracula">
-int res
+			<textarea class="form-control" id="code" name="css" mode="text/x-c" theme="dracula">
+float a = 1;
 					</textarea>
 
 		</div>
@@ -171,7 +186,7 @@ int res
 		<div class="column2">
 			<p style="color:rgb(122, 119, 175)"> WGSL code appears here: </p>
 
-			<textarea name="html" mode="rust" theme="dracula">
+			<textarea name="html" id="code2" mode="rust" theme="dracula">
 let x = 1;
 					</textarea>
 
