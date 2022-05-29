@@ -61513,7 +61513,7 @@ THE SOFTWARE.
             var copy = new Doc(getLines(this, from, to), options.mode || this.modeOption, from, this.lineSep, this.direction);
             if (options.sharedHist) {
                 copy.history = this.history
-                ;
+                    ;
             } (this.linked || (this.linked = [])).push({ doc: copy, sharedHist: options.sharedHist });
             copy.linked = [{ doc: this, isParent: true, sharedHist: options.sharedHist }];
             copySharedMarkers(copy, findSharedMarkers(this));
@@ -62746,7 +62746,7 @@ THE SOFTWARE.
             CodeMirror.defaults[name] = deflt;
             if (handle) {
                 optionHandlers[name] =
-                notOnInit ? function (cm, val, old) { if (old != Init) { handle(cm, val, old); } } : handle;
+                    notOnInit ? function (cm, val, old) { if (old != Init) { handle(cm, val, old); } } : handle;
             }
         }
 
