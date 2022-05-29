@@ -13,6 +13,19 @@
         right: 20px;
     }
 
+    .alignleft {
+        float: left;
+    }
+
+    .alignright {
+        float: right;
+    }
+
+    /* .li {
+        font-size: 100px;
+    } */
+
+
     /* div {
         color: #3cbc5c;
     } */
@@ -48,16 +61,21 @@
 </head>
 
 <body>
-    <div id="logo">
-        <a href="/"><img src="/home2.png"></a>
-    </div>
     <div class="container">
+
+
         <div class="page-header">
-            <h1>Eliot Bo's</h1>
+            <h1 class="alignleft">Eliot Bo's <small></small> </h1>
+            <a href="/" class="alignright"> <img src="/home2.png"> </a>
+            <div style="clear: both;"></div>
         </div>
-        <ul>
+
+
+
+        <ul style=" font-size: 20px; text-decoration: none">
             <li><a href="./glsl2wgsl/">GLSL2WGSL</a>
-                <span style="color: #98aa9c"> convert glsl code to wgsl </span>
+                <span style="color: #98aa9c"> convert glsl code to wgsl
+                </span>
             </li>
             <li><a href="./blog/">Blog</a> </li>
         </ul>

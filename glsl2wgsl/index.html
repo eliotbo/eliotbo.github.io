@@ -40,12 +40,18 @@
 	<style>
 		.CodeMirror {
 			border: 5px solid #eee;
-			/* height: 50px; */
+			height: 800px !important;
+			/* min-height: 800px !important; */
 			text-align: left !important;
-			/* resize: vertical; */
+			resize: vertical;
 			/* overflow: auto !important; */
 
+
 		}
+
+
+
+
 
 		.CodeMirror.read-only .CodeMirror-lines {
 			background-color: #e4fdc7;
@@ -55,11 +61,11 @@
 			color: #3cbc5c;
 		}
 
-		#logo {
+		/* #logo {
 			position: fixed;
 			top: 20px;
 			right: 20px;
-		}
+		} */
 
 		.button {
 			background-color: #db7b26;
@@ -77,9 +83,9 @@
 		/* Create two equal columns that floats next to each other */
 		.column {
 			float: left;
-			/* flex: 49%; */
-			width: 50%;
-			padding: 10px;
+			flex: 49%;
+			width: 48%;
+			padding: 25px 0px 70px 40px;
 			height: 1000px;
 			/* Should be removed. Only for demonstration */
 		}
@@ -89,51 +95,81 @@
 			content: "";
 			display: flex;
 			clear: both;
+			padding: 250px 50px 750px 1000px;
 		}
+
+		.alignleft {
+			float: left;
+		}
+
+		.alignright {
+			float: right;
+		}
+
+
+		/* .div2 {
+			border: 1px solid black;
+			padding: 25px 50px 75px 100px;
+			background-color: lightblue;
+		} */
 	</style>
+
+	<script>
+		// var css = $('textarea[mode="text/x-c"]');
+		// var html = $('textarea[mode="rust"]');
+
+		// var editor1 = css.editor();
+		// editor1.setSize(null, "500");
+
+
+		// var editor2 = html.editor();
+		// editor2.setSize(null, "500");
+	</script>
 
 </head>
 
 <body>
+
 	<div class="container">
 
-		<div id="logo">
-			<a href="/"><img src="/home2.png"></a>
-		</div>
 
 		<div class="page-header">
-			<h1>GLSL2WGSL <small>convert glsl code to wgsl</small></h1>
+
+			<h1 class="alignleft">GLSL2WGSL <small>convert glsl code to wgsl</small> </h1>
+			<a href="/" class="alignright"> <img src="/home2.png"> </a>
+			<div style="clear: both;"></div>
+
 		</div>
 
 		<center>
 			<button onclick="dum()" class="button">
-				Convert!
+				--- Convert -->
 			</button>
 		</center>
 
 	</div>
-	<center>
-		<div class="row">
 
-			<div class="column">
-				<p>Paste glsl code here:</p>
+	<div class="row">
 
-				<textarea name="css" mode="text/x-c" theme="dracula">
+		<div class="column">
+			<p>Paste glsl code here:</p>
+
+			<textarea class="form-control name=" css" mode="text/x-c" theme="dracula">
 int res
 					</textarea>
 
-			</div>
+		</div>
 
-			<div class="column">
-				<p> WGSL code appears here: </p>
+		<div class="column">
+			<p> WGSL code appears here: </p>
 
-				<textarea name="html" mode="rust" theme="dracula">
+			<textarea name="html" mode="rust" theme="dracula">
 let x = 1;
 					</textarea>
 
-			</div>
 		</div>
-	</center>
+	</div>
+
 
 </body>
 

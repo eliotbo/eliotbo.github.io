@@ -35,11 +35,10 @@ var css = $('textarea[mode="text/x-c"]');
 var html = $('textarea[mode="rust"]');
 
 var editor1 = css.editor();
-editor1.setSize(null, "500");
-
+editor1.setSize(null, "800");
 
 var editor2 = html.editor();
-editor2.setSize(null, "500");
+editor2.setSize(null, "800");
 
 init()
     .then(() => {
@@ -54,6 +53,8 @@ window.dum = function dum() {
     let t = editor1.getValue();
     let savior = do_parse(t);
     editor2.setValue(savior);
+    editor1.setSize(null, "800");
+    editor2.setSize(null, "800");
 }
 
 
