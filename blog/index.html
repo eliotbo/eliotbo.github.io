@@ -1,128 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body style="background-color:rgb(19, 18, 29);"></body>
+<body style="background-color:rgb(19, 18, 29)"></body>
+<style>
+	.page-header2 {
+		color: #3cbc5c;
+		float: left;
+		margin-bottom: -2.5cm;
+	}
+
+	.logo {
+		position: relative;
+		/* top: 50px; */
+		right: 0px;
+		bottom: 10px;
+		margin-bottom: -15px;
+		float: right;
+	}
+
+	.alignleft {
+		float: left;
+	}
+
+	.alignright {
+		float: right;
+	}
+
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		color: rgb(122, 119, 175);
+		/* width: 1000px; */
+	}
+
+	.column {
+		display: block;
+		float: center;
+		flex: 80%;
+		width: 500px;
+		padding: 25px 0px 70px 40px;
+		height: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	ul li::before {
+		content: "\2022";
+		color: rgb(181, 180, 191);
+		font-weight: bold;
+		display: inline-block;
+		width: 1em;
+		margin-left: -1em;
+	}
+</style>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Basic</title>
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
-
-	<script src="https://provejs.github.io/provejs-jquery/examples/prove.js"></script>
-	<script src="https://provejs.github.io/provejs-jquery/examples/decorator.js"></script>
-
-
-	<!-- start of codemirror -->
-	<!-- <link rel="stylesheet" href="../../dist/codemirror-examples.css"> -->
-	<!-- <link rel=stylesheet href="../../theme/dracula.css"> -->
-	<!-- <script src="../../dist/codemirror-examples.js"></script> -->
-	<!-- <script src="../../lib/codemirror.js"></script> -->
-	<!-- <script src="../../mode/rust/rust.js"></script>
-	<script src="../../mode/clike/clike.js"></script> -->
-
-
-
-
-
-	<!-- <script>
-		$(function () {
-			// var css = $('textarea[mode="text/x-c"]');
-			// var html = $('textarea[mode="rust"]');
-
-			var editor1 = css.editor();
-			var editor2 = html.editor();
-
-		});
-	</script> -->
-
-	<style>
-		.CodeMirror {
-			border: 1px solid #eee;
-			min-height: 50px;
-		}
-
-		.CodeMirror.read-only .CodeMirror-lines {
-			background-color: #e4fdc7;
-		}
-
-		.page-header {
-			color: #3cbc5c;
-		}
-
-		#logo {
-			position: fixed;
-			top: 20px;
-			right: 20px;
-		}
-
-		.alignleft {
-			float: left;
-		}
-
-		.alignright {
-			float: right;
-		}
-	</style>
-
+	<title>Eliot Bo's Blog</title>
 </head>
 
+
 <body>
-	<div class="container">
-		<!-- 
-		<div id="logo">
-			<a href="/"><img src="/home2.png"></a>
-		</div>
+	<div class="column">
 
-		<div class="page-header">
-			<h1>Blog <small>bits of wisdom... I hope</small></h1>
-		</div> -->
+		<h1 class="page-header2">Blog <small>bits of wisdom... I hope</small> </h1>
+		<a href="/" class="logo"> <img src="/home2.png"> </a>
 
-		<div class="page-header">
+		<div style="clear: both;"></div>
 
-			<h1 class="alignleft">Blog <small>bits of wisdom... I hope</small> </h1>
-			<a href="/" class="alignright"> <img src="/home2.png"> </a>
-			<div style="clear: both;"></div>
+		<hr style="border: 2px solid rgb(122, 119, 175); border-radius: 5px;  margin-bottom: 1cm;">
 
-		</div>
-
-		<p> empty </p>
-
-		<!-- <form class="form-horizontal">
-
-			<div class="form-group">
-				<label for="css" class="col-sm-2 control-label">GLSL</label>
-				<div class="col-sm-10">
-					<textarea class="form-control" name="css" mode="text/x-c" theme="dracula">
-int res
-</textarea>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="html" class="col-sm-2 control-label">WGSL</label>
-				<div class="col-sm-10">
-					<textarea class="form-control" name="html" mode="rust" theme="dracula">
-let x = 1;
-					</textarea>
-				</div>
-			</div>
-
-		</form> -->
-
+		<p>empty</p>
 	</div>
 </body>
+
 
 </html>

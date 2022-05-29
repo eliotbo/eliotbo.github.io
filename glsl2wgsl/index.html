@@ -4,54 +4,60 @@
 <body style="background-color:rgb(19, 18, 29);"></body>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<title>GLSL2WGSL</title>
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
-
-	<script src="https://provejs.github.io/provejs-jquery/examples/prove.js"></script>
-	<script src="https://provejs.github.io/provejs-jquery/examples/decorator.js"></script>
-
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 
 	<!-- start of codemirror -->
-	<link rel="stylesheet" href="../dist/codemirror-examples.css">
-	<link rel=stylesheet href="../theme/dracula.css">
-	<script src="../dist/codemirror-examples.js"></script>
-	<!-- <script src="../../lib/codemirror.js"></script> -->
-	<script src="../mode/rust/rust.js"></script>
-	<script src="../mode/clike/clike.js"></script>
-	<script src="./main2.js" type="module"></script>
+	<!-- <link rel="stylesheet" href="../dist/codemirror-examples.css"> -->
+	<!-- <link rel=stylesheet href="../theme/dracula.css"> -->
+	<!-- <script src="../dist/codemirror-examples.js"></script> -->
+	<!-- <script src="../../codemirror/lib/codemirror.js"></script> -->
+	<!-- <script src="../mode/rust/rust.js"></script> -->
+	<!-- <script src="../mode/clike/clike.js"></script> -->
+	<!-- <script src="./main2.js" type="module"></script> -->
 	<!-- <script src="./glsl2wgsl.js" type="module"></script> -->
 
+	<!-- <script src="../dist/codemirror-examples.js"></script> -->
+	<!-- <script src="../mode/rust/rust.js"></script> -->
+	<!-- <link rel=stylesheet href="../theme/dracula.css">
+	<script src="../codemirror/lib/codemirror.js"></script>
+	<link rel=stylesheet href="../codemirror/lib/codemirror.css">
+	<script src="../mode/clike/clike.js"></script>
+	<script src="./main2.js" type="module"></script> -->
+
+
+	<link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="../codemirror/theme/dracula.css">
+	<script src="../codemirror/lib/codemirror.js"></script>
+	<script src="../codemirror/addon/mode/simple.js"></script>
+	<script src="../codemirror/mode/rust/rust.js"></script>
+	<script src="../codemirror/mode/clike/clike.js"></script>
+	<script src="main2.js" type="module"></script>
 
 	<style>
-		.CodeMirror {
-			border: 5px solid #eee;
-			height: 800px !important;
-			/* min-height: 800px !important; */
-			text-align: left !important;
-			resize: vertical;
-			/* overflow: auto !important; */
-
-
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			/* width: 1000px; */
 		}
 
+		.CodeMirror {
+			border: 5px solid #eee;
+			height: 900px !important;
+			/* min-height: 800px !important; */
+			text-align: left !important;
+			/* resize: vertical !important; */
+			/* overflow: auto !important; */
+		}
 
-
-
+		.logo {
+			position: relative;
+			/* top: 50px; */
+			right: 0px;
+			bottom: 10px;
+			margin-bottom: -15px;
+			float: right;
+		}
 
 		.CodeMirror.read-only .CodeMirror-lines {
 			background-color: #e4fdc7;
@@ -61,33 +67,49 @@
 			color: #3cbc5c;
 		}
 
-		/* #logo {
-			position: fixed;
-			top: 20px;
-			right: 20px;
-		} */
+		.page-header2 {
+			color: #3cbc5c;
+			float: left;
+			margin-bottom: -2.5cm;
+		}
 
 		.button {
-			background-color: #db7b26;
+			background-color: #db26cf;
 			border: none;
 			color: white;
-			padding: 15px 32px;
-			text-align: center;
-			text-decoration: none;
+			padding: 13px 32px;
+
+			/* text-align: center; */
+			/* text-decoration: none; */
+			/* padding: 25px 25px 70px 40px; */
 			display: inline-block;
-			font-size: 16px;
+			font-size: 20px;
 			margin: 4px 2px;
 			cursor: pointer;
+			float: right;
+			margin-right: auto;
+			margin-top: -20px;
 		}
 
 		/* Create two equal columns that floats next to each other */
-		.column {
+		.column2 {
 			float: left;
-			flex: 49%;
-			width: 48%;
+			flex: 50%;
+			width: 45%;
 			padding: 25px 0px 70px 40px;
 			height: 1000px;
 			/* Should be removed. Only for demonstration */
+		}
+
+		.column {
+			display: block;
+			float: center;
+			flex: 80%;
+			width: 800px;
+			padding: 25px 0px 70px 40px;
+			height: 150px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		/* Clear floats after the columns */
@@ -95,7 +117,7 @@
 			content: "";
 			display: flex;
 			clear: both;
-			padding: 250px 50px 750px 1000px;
+			/* padding: 25px 50px 75px 100px; */
 		}
 
 		.alignleft {
@@ -130,45 +152,49 @@
 
 <body>
 
-	<div class="container">
+
+	<div class="column">
 
 
-		<div class="page-header">
 
-			<h1 class="alignleft">GLSL2WGSL <small>convert glsl code to wgsl</small> </h1>
-			<a href="/" class="alignright"> <img src="/home2.png"> </a>
-			<div style="clear: both;"></div>
+		<h1 class="page-header2">GLSL2WGSL2 <small>convert glsl code to wgsl</small> </h1>
+		<a href="/" class="logo"> <img src="/home2.png"> </a>
+		<div style="clear: both;"></div>
+		<hr style="border: 2px solid rgb(122, 119, 175); border-radius: 5px;  margin-bottom: 1cm;">
 
-		</div>
 
-		<center>
-			<button onclick="dum()" class="button">
-				--- Convert -->
-			</button>
-		</center>
+
+		<!-- <center>
+			<button onclick="dum()" class="button"> --- Convert  </button>
+		</center> -->
+
 
 	</div>
 
-	<div class="row">
 
-		<div class="column">
-			<p>Paste glsl code here:</p>
+	<div class="row" style=" margin-top: -3cm;">
 
-			<textarea class="form-control name=" css" mode="text/x-c" theme="dracula">
-int res
+		<div class="column2">
+			<p style="color:rgb(122, 119, 175)">Paste glsl code here:
+				<button onclick="dum()" class="button"> &#8594 Convert &#8594 </button>
+			</p>
+
+			<textarea class="form-control" id="code" name="css" mode="text/x-c">
+float a = 1;
 					</textarea>
 
 		</div>
 
-		<div class="column">
-			<p> WGSL code appears here: </p>
+		<div class="column2">
+			<p style="color:rgb(122, 119, 175)"> WGSL code appears here: </p>
 
-			<textarea name="html" mode="rust" theme="dracula">
+			<textarea name="html" id="code2" mode="rust">
 let x = 1;
 					</textarea>
 
 		</div>
 	</div>
+
 
 
 </body>
