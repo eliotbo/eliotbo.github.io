@@ -1,9 +1,9 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
-* @param {string} v
+* @param {string} _v
 */
-export function greet(v: string): void;
+export function greet(_v: string): void;
 /**
 * @param {string} x
 * @returns {string}
